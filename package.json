@@ -1,15 +1,29 @@
 {
-  "name": "test",
+  "name": "excel-to-table",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
+  "main": "lib/landscape-components.umd.min.js",
+  "keywords": [
+    "excel",
+    "table"
+  ],
+  "author": {
+    "name": "yzxx"
+  },
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "lib": "vue-cli-service build --target lib --name landscape-components --dest lib components/index.js"
   },
   "dependencies": {
     "core-js": "^3.8.3",
-    "vue": "^2.6.14"
+    "element-ui": "^2.15.13",
+    "excel-to-table": "^0.1.0",
+    "exceljs": "^4.3.0",
+    "lodash": "^4.17.21",
+    "vue": "^2.6.14",
+    "vue-easytable": "^2.24.0"
   },
   "devDependencies": {
     "@babel/core": "^7.12.16",
@@ -33,7 +47,9 @@
     "parserOptions": {
       "parser": "@babel/eslint-parser"
     },
-    "rules": {}
+    "rules": {
+      "no-unused-vars": "off"
+    }
   },
   "browserslist": [
     "> 1%",
